@@ -108,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       .chord-pro-line {
         margin: 0 !important;
-        position: relative;
       }
 
       .chord-pro-br {
@@ -147,22 +146,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      .__iw-delete {
-        position: absolute;
-        top: 0;
-        right: 0;
-        color: white;
-        cursor: pointer;
-        display: none;
-      }
-
       .__iw-edit {
         cursor: pointer;
         margin: 4px;
-      }
-
-      .chord-pro-line:hover .__iw-delete {
-        display: block;
       }
   `;
   document.head.append(styles);
@@ -177,15 +163,4 @@ document.addEventListener('DOMContentLoaded', () => {
     edit.innerText = newState ? 'Edit ON' : 'Edit OFF';
   };
   document.querySelector('.transposeControls').prepend(edit);
-
-  // X button to delete a line
-  Array.from(document.querySelectorAll('.chord-pro-line')).forEach(l => {
-    const x = document.createElement('div');
-    x.innerText = '✕';
-    x.className = '__iw-delete';
-    x.onclick = () => {
-      x.parentElement.remove();
-    };
-    l.appendChild(x);
-  });
 });
