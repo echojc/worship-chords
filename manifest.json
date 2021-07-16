@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Worship Chords",
+  "version": "0",
+  "description": "Print-friendly styling for common worship chord sites.",
+  "content_scripts": [
+    {
+      "matches": ["*://*.worshipchords.com/*"],
+      "run_at": "document_start",
+      "js": ["worshipchords.js"]
+    },
+    {
+      "matches": ["*://*.worshiptogether.com/*"],
+      "run_at": "document_start",
+      "js": ["worshiptogether.js"]
+    }
+  ]
+}
