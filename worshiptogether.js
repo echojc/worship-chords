@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       .song_taxonomy .detail {
-        font-size: 8pt;
+        font-size: 8pt !important;
         padding: 0;
         border: 0;
         line-height: 1em !important;
